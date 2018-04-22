@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+<title>Project</title>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+      <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type='text/javascript' src='https://cdn.scaledrone.com/scaledrone.min.js'></script>
+
+      
+</head>
+
+<body class="w3-light-grey">
+  
+<!-- Top container -->
+<div class="w3-bar w3-top w3-black w3-large" style="z-index:4">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item"><img src="https://image.flaticon.com/icons/svg/682/682037.svg" width="30" height="38" class="d-inline-block align-top" alt="">    ROBOT</span>
+</p>
+  
+  <div class="container" style="width: 1550px;">
+    <button type="button" class="btn btn-primary w3-right" data-toggle="modal" data-target="#myModal" style="height:35px">Command</button>
+  </div>
+</div>  
+
+<div class="container">
+    <!-- Trigger the modal with a button -->
+    
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Command</h4>
+          </div>
+          <div class="modal-body">
+            <!--แสดงคำสั่ง-->
+                <div><ul class="w3-ul w3-border w3-large " >
+                    <li>"this is a ..... end"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สอนให้รู้จักวัตถุ</li>
+                    <li>"This is how to....."&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สอนการกระทำ</li>
+                    <li>"do you know a ...... "&nbsp;&nbsp;&nbsp;&nbsp;เช็คว่ารู้จักวัตถุไหม</li>
+                        <li>" jerry ........"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;สั่งงาน</li>
+                    </ul>
+                </div>
+                 <br /> 
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    div.ex1 {
+        /*background-color: #777;
+        width: 480px;*/
+        height: 625px;
+        overflow: scroll;
+    }
+  </style>
+  
+<div class="w3-row-padding w3-center w3-margin-top">
+    <hr>
+    
+    <div class="w3-third">
+      <div class="w3-card w3-container" style="min-height:675px">
+        <div class="ex1">
+            <div class="page-content" style="padding-top: 0px;" align="center">
+                    <h4>Object</h4>
+                          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" style="width:40%;" id="ex-table">
+                            <thead>
+                              <tr>
+                                <th><font size="1.8">Object Name</font></th>
+                                <th><font size="1.8">Image</font></th>
+                                <th><font size="1.8">Edit</font></th>
+                                <th><a href="https://storage.googleapis.com/jidapha/add.html" class=" btn-lg"><span class="glyphicon glyphicon-plus"></span></a></th>
+                               <!-- <th><button class="mdl-button mdl-js-button mdl-button--raised mdl-button--accen" data-toggle="modal" data-target="#myModal">ADD</button></th>-->
+                              </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                          </table>
+                  </div>
+              
+              
+              <!--action-->
+                  <div class="page-content" style="padding-top: 20px;"  align="center">
+                      <h4>Action</h4>
+                          <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp" width="50" id="action-table">
+                          <thead>
+                              <tr>
+                              <th><font size="1.8">Action Name</font></th>
+                              <th><font size="1.8">Step</font></th>
+                              <th><font size="1.8">Motor</font></th>
+                              <th><font size="1.8">Edit</font></th>
+                              <th><a href="https://storage.googleapis.com/jidapha/add1.html" class=" btn-lg"><span class="glyphicon glyphicon-plus"></span></a></th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                          </tbody>
+                          </table>
+                </div>
+                
+              
+                  <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+              
+                  <script>
+                  
+                  const config = 
+                  {
+                              apiKey: "AIzaSyAQyDaB745fzaEUYN6hWNoce2UdpULxMtg",
+                              authDomain: "dogwood-terra-184417.firebaseapp.com",
+                              databaseURL: "https://dogwood-terra-184417.firebaseio.com",
+                              projectId: "dogwood-terra-184417",
+                              storageBucket: "dogwood-terra-184417.appspot.com",
+                              messagingSenderId: "976262919720"
+                  };
+                firebase.initializeApp(config);
+              
+              
+                ///object
+              
+                  var database = firebase.database();
+                  database.ref("object/").once('child_added', function(snapshot)
+                  {
+                        if(snapshot.exists())
+                        {
+                            var content = '';
+                            snapshot.forEach(function(data)
+                            {
+                                var val = data.val();
+                                  content +='<tr >';
+                                  content += '<td align="left">' + val.object_Name + '</td>';
+                                  content += '<td><a href="'+val.thumbnail+'" target="_blank"> Click for Preview</a></td>';
+                                  content += '<td><a  href="https://storage.googleapis.com/jidapha/edit.html?id='+data.getKey()+'" class="btn-lg"><span class="glyphicon glyphicon-pencil"></span</a></td>';
+                                  content += '<td><a  href="https://storage.googleapis.com/jidapha/delete.html?id='+data.getKey()+'" class="btn-lg"><span class="glyphicon glyphicon-remove"></span></a></td>';
+                                  content += '</tr>';
+                                
+                            });
+                            var theDiv = document.getElementById("ex-table");
+                            theDiv.innerHTML += content; 
+                            //$('#ex-table').append(content);
+                        }
+                  });
+              
+              ///action
+                  database.ref("action/").once('child_added', function(snapshot)
+                  {
+                      if(snapshot.exists())
+                      {
+                          var content = '';
+                          snapshot.forEach(function(data)
+                          {
+                              var val = data.val();
+                              content +='<tr >';
+                                  //content += '<td align="left">' + data.getKey() + '</td>';
+                                  content += '<td align="left">' + val.action_name + '</td>';
+                                  content += '<td align="left">' + val.step + '</td>';
+                                  content += '<td align="left">' + val.motor + '</td>';
+                                  //content += '<td><a href="'+val.thumbnail+'" target="_blank"> Click for Preview</a></td>';
+                                  content += '<td><a  href="https://storage.googleapis.com/jidapha/edit1.html?id='+data.getKey()+'" class="btn-lg"><span class="glyphicon glyphicon-pencil"></span</a></td>';
+                                  content += '<td><a  href="https://storage.googleapis.com/jidapha/delete.html?id='+data.getKey()+'" class="btn-lg" onclick="myFunction()"><span class="glyphicon glyphicon-remove"></span></a></td>';
+                                  content += '</tr>';
+                              
+                          });
+                          var theDiv = document.getElementById("action-table");
+                          theDiv.innerHTML += content;  
+                      }
+                  });
+
+                  function update(){
+                    var rootRef = firebase.database().ref();
+                    var storesRef = rootRef.child('update');
+                    alert("success");
+                    storesRef.push(1);
+                  }
+                  </script>
+                  </br>
+      </div>
+    </p>
+      <button class="btn btn-primary" onclick="update()">Update</button>
+  </p>
+    </div>
+  </div>
+    
+    <div class="w3-third">
+      <div class="w3-card w3-container" style="min-height:430px">
+          <br>
+          <center>
+          <button class="btn btn-primary" onclick="showWebrtc()" id="join" style="width: 150px;height: 50px; margin-top:35%;">Join</button>
+          </center>
+             <div id="myDIV" style="display: none;">
+             <iframe id = "f1" width="200" height="400"
+                src='none'>
+             </iframe>
+             </div>
+      </div>
+    </div>
+    <script>
+      function showWebrtc() {
+          var x = document.getElementById("myDIV");
+          var y = document.getElementById("f1");
+          var z = document.getElementById("join");
+          if (x.style.display === "none") {
+              x.style.display = "block";
+              y.src = 'file:///C:/Users/MOJI/Desktop/project/webrtc/webrtc-master/index.html#1234'
+              z.style.display = "none";
+          } else {
+              x.style.display = "none";
+          }
+      }
+      </script>
+    
+    <style>
+          .onoffswitch {
+              position: relative; width: 120px;
+              -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+          }
+          .onoffswitch-checkbox {
+              display: none;
+          }
+          .onoffswitch-label {
+              display: block; overflow: hidden; cursor: pointer;
+              border: 2px solid #999999; border-radius: 0px;
+          }
+          .onoffswitch-inner {
+              display: block; width: 200%; margin-left: -100%;
+              transition: margin 0.3s ease-in 0s;
+          }
+          .onoffswitch-inner:before, .onoffswitch-inner:after {
+              display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 26px;
+              font-size: 15px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+              box-sizing: border-box;
+              border: 2px solid transparent;
+              background-clip: padding-box;
+          }
+          .onoffswitch-inner:before {
+              content: "disconnect ";
+              padding-left: 0px;
+              background-color: #BDBDBD; color: #FFFFFF;
+          }
+          .onoffswitch-inner:after {
+              content: "connect";
+              padding-right: 20px;
+              background-color: #F53636; color: #FFFFFF;
+              text-align: right;
+          }
+          .onoffswitch-switch {
+              display: block; width: 15px; margin: 0px;
+              background: #999999;
+              position: absolute; top: 0; bottom: 0;
+              right: 105px;
+              transition: all 0.3s ease-in 0s;  
+          }
+          .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+              margin-left: 0;
+          }
+          .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+              right: 0px; 
+          }
+          /* Gauges */
+              #g1,#g2{
+                width:220px; height:200px;
+                display: inline-block;
+                margin: 0.5em;
+              }
+
+    </style>
+    <div class="w3-third">
+      <div class="w3-card w3-container" style="min-height:430px">
+        <!--<h3>CONNECT ROBOT</h3>
+        <center>
+            <div class="onoffswitch">
+                <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+                <label class="onoffswitch-label" for="myonoffswitch">
+                    <span class="onoffswitch-inner"></span>
+                    <span class="onoffswitch-switch"></span>
+                </label>
+            </div>
+          </center>-->
+          <div>
+              <iframe id = "f1" width="200" height="400"
+                 src='C:\Users\MOJI\Desktop\project\jQuery-Plugin-To-Generate-Animated-Dynamic-Gauges-dynameter\index.html'>
+              </iframe>
+          </div>
+      </div>
+      <p>
+    </div>
+
+
+    <p>
+        <!-- Header -->
+        <header class="w3-container w3-theme w3-padding w3-right" id="myHeader" style="width:66%;">
+          <div class="w3-center" style="height:200px;">
+            <style>
+              a:link {
+                color:#4285f4;
+                text-decoration: none;
+              }
+              a:visited {
+                color:rgb(51, 163, 255);
+              }
+              a:hover {
+                color:#33F;
+              }
+              .center {
+                padding: 10px;
+                text-align: center;
+              }
+              .final {
+                color: black;
+                padding-right: 3px; 
+              }
+              .interim {
+                color: gray;
+              }
+              .info {
+                font-size: 14px;
+                text-align: center;
+                color: #777;
+                display: none;
+              }
+              .right {
+                float: right;
+              }
+              .sidebyside {
+                display: inline-block;
+                min-height: 30px;
+                text-align: left;
+                vertical-align: top;
+              }
+              #headline {
+                font-size: 20px;
+                font-weight: 300;
+              }
+              #info {
+                font-size: 20px;
+                text-align: center;
+                color: #777;
+                visibility: hidden;
+              }
+              #results {
+                font-size: 14px;
+                font-weight: bold;
+                border: 1px solid #ddd;
+                padding: 15px;
+                text-align: left;
+                min-height: 40px;
+                background-color: rgb(255, 255, 255);
+              }
+              #start_button {
+                border: 0;
+                background-color:transparent;
+                padding: 0;
+              }
+            </style>
+
+                
+                <script>
+                var config = {
+                            apiKey: "AIzaSyAQyDaB745fzaEUYN6hWNoce2UdpULxMtg",
+                            authDomain: "dogwood-terra-184417.firebaseapp.com",
+                            databaseURL: "https://dogwood-terra-184417.firebaseio.com",
+                            projectId: "dogwood-terra-184417",
+                            storageBucket: "dogwood-terra-184417.appspot.com",
+                            messagingSenderId: "976262919720"
+                        };
+                        firebase.initializeApp(config);
+                    </script>
+
+    
+            <h2 class="center" id="headline">Speech to text</h2>
+                
+            <div id="info">
+              <p id="info_start">Click on the microphone icon and begin speaking.</p>
+              <p id="info_speak_now">Speak now.</p>
+              <p id="info_no_speech">No speech was detected. You may need to adjust your
+                <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+                  microphone settings</a>.</p>
+              <p id="info_no_microphone" style="display:none">
+                No microphone was found. Ensure that a microphone is installed and that
+                <a href="//support.google.com/chrome/bin/answer.py?hl=en&amp;answer=1407892">
+                microphone settings</a> are configured correctly.</p>
+              <p id="info_allow">Click the "Allow" button above to enable your microphone.</p>
+              <p id="info_denied">Permission to use microphone was denied.</p>
+              <p id="info_blocked">Permission to use microphone is blocked. To change,
+                go to chrome://settings/contentExceptions#media-stream</p>
+              <p id="info_upgrade">Web Speech API is not supported by this browser.
+                 Upgrade to <a href="//www.google.com/chrome">Chrome</a>
+                 version 25 or later.</p>
+            </div>
+            <div class="right">
+              <button id="start_button" onclick="startButton(event)">
+                <img id="start_img" src="https://storage.googleapis.com/jidapha/controll_web/mic.gif" alt="Start"></button>
+            </div>
+            
+            <form id="results" >
+              <span id="final_span" class="final"></span>
+              <span id="interim_span" class="interim"></span>
+              <p>
+              </form>
+            
+            <!--<div class="center">
+              <div class="sidebyside" style="text-align:right">
+                <button id="copy_button" class="btn btn-primary" onclick="savedata()">
+                  SAVE</button>
+                <div id="copy_info" class="info">
+                  Press Control-C to copy text.<br>(Command-C on Mac.)
+                </div>
+              </div>-->
+            
+    
+             
+              <div id="div_language">
+                <select id="select_language" onchange="updateCountry()" style="display: none;"></select>
+                &nbsp;&nbsp;
+                <select id="select_dialect" style="display: none;"></select>
+              </div>
+            </div>
+            <script>
+            var langs = 
+            [['Afrikaans',       ['af-ZA']],
+             ['Bahasa Indonesia',['id-ID']],
+             ['Bahasa Melayu',   ['ms-MY']],
+             ['Català',          ['ca-ES']],
+             ['Čeština',         ['cs-CZ']],
+             ['Deutsch',         ['de-DE']],
+             ['English',         ['en-AU', 'Australia'],
+                                 ['en-CA', 'Canada'],
+                                 ['en-IN', 'India'],
+                                 ['en-NZ', 'New Zealand'],
+                                 ['en-ZA', 'South Africa'],
+                                 ['en-GB', 'United Kingdom'],
+                                 ['en-US', 'United States']],
+             ['Español',         ['es-AR', 'Argentina'],
+                                 ['es-BO', 'Bolivia'],
+                                 ['es-CL', 'Chile'],
+                                 ['es-CO', 'Colombia'],
+                                 ['es-CR', 'Costa Rica'],
+                                 ['es-EC', 'Ecuador'],
+                                 ['es-SV', 'El Salvador'],
+                                 ['es-ES', 'España'],
+                                 ['es-US', 'Estados Unidos'],
+                                 ['es-GT', 'Guatemala'],
+                                 ['es-HN', 'Honduras'],
+                                 ['es-MX', 'México'],
+                                 ['es-NI', 'Nicaragua'],
+                                 ['es-PA', 'Panamá'],
+                                 ['es-PY', 'Paraguay'],
+                                 ['es-PE', 'Perú'],
+                                 ['es-PR', 'Puerto Rico'],
+                                 ['es-DO', 'República Dominicana'],
+                                 ['es-UY', 'Uruguay'],
+                                 ['es-VE', 'Venezuela']],
+             ['Euskara',         ['eu-ES']],
+             ['Français',        ['fr-FR']],
+             ['Galego',          ['gl-ES']],
+             ['Hrvatski',        ['hr_HR']],
+             ['IsiZulu',         ['zu-ZA']],
+             ['Íslenska',        ['is-IS']],
+             ['Italiano',        ['it-IT', 'Italia'],
+                                 ['it-CH', 'Svizzera']],
+             ['Magyar',          ['hu-HU']],
+             ['Nederlands',      ['nl-NL']],
+             ['Norsk bokmål',    ['nb-NO']],
+             ['Polski',          ['pl-PL']],
+             ['Português',       ['pt-BR', 'Brasil'],
+                                 ['pt-PT', 'Portugal']],
+             ['Română',          ['ro-RO']],
+             ['Slovenčina',      ['sk-SK']],
+             ['Suomi',           ['fi-FI']],
+             ['Svenska',         ['sv-SE']],
+             ['Türkçe',          ['tr-TR']],
+             ['български',       ['bg-BG']],
+             ['Pусский',         ['ru-RU']],
+             ['Српски',          ['sr-RS']],
+             ['한국어',            ['ko-KR']],
+             ['中文',             ['cmn-Hans-CN', '普通话 (中国大陆)'],
+                                 ['cmn-Hans-HK', '普通话 (香港)'],
+                                 ['cmn-Hant-TW', '中文 (台灣)'],
+                                 ['yue-Hant-HK', '粵語 (香港)']],
+             ['日本語',           ['ja-JP']],
+             ['Lingua latīna',   ['la']]];
+            
+            for (var i = 0; i < langs.length; i++) {
+              select_language.options[i] = new Option(langs[i][0], i);
+            }
+            select_language.selectedIndex = 6;
+            updateCountry();
+            select_dialect.selectedIndex = 6;
+            showInfo('info_start');
+            
+            function updateCountry() {
+              for (var i = select_dialect.options.length - 1; i >= 0; i--) {
+                select_dialect.remove(i);
+              }
+              var list = langs[select_language.selectedIndex];
+              for (var i = 1; i < list.length; i++) {
+                select_dialect.options.add(new Option(list[i][1], list[i][0]));
+              }
+              select_dialect.style.visibility = list[1].length == 1 ? 'hidden' : 'visible';
+            }
+            
+            var create_email = false;
+            var final_transcript = '';
+            var recognizing = false;
+            var ignore_onend;
+            var start_timestamp;
+            if (!('webkitSpeechRecognition' in window)) {
+              upgrade();
+            } else {
+              start_button.style.display = 'inline-block';
+              var recognition = new webkitSpeechRecognition();
+              recognition.continuous = true;
+              recognition.interimResults = true;
+            
+              recognition.onstart = function() {
+                recognizing = true;
+                showInfo('info_speak_now');
+                start_img.src = 'https://storage.googleapis.com/jidapha/controll_web/mic-animate.gif';
+              };
+            
+              recognition.onerror = function(event) {
+                if (event.error == 'no-speech') {
+                  start_img.src = 'https://storage.googleapis.com/jidapha/controll_web/mic.gif';
+                  showInfo('info_no_speech');
+                  ignore_onend = true;
+                }
+                if (event.error == 'audio-capture') {
+                  start_img.src = 'https://storage.googleapis.com/jidapha/controll_web/mic.gif';
+                  showInfo('info_no_microphone');
+                  ignore_onend = true;
+                }
+                if (event.error == 'not-allowed') {
+                  if (event.timeStamp - start_timestamp < 100) {
+                    showInfo('info_blocked');
+                  } else {
+                    showInfo('info_denied');
+                  }
+                  ignore_onend = true;
+                }
+              };
+            
+              recognition.onend = function() {
+                recognizing = false;
+                if (ignore_onend) {
+                  return;
+                }
+                start_img.src = 'https://storage.googleapis.com/jidapha/controll_web/mic.gif';
+                if (!final_transcript) {
+                  showInfo('info_start');
+                  return;
+                }
+                showInfo('');
+                if (window.getSelection) {
+                  window.getSelection().removeAllRanges();
+                  var range = document.createRange();
+                  range.selectNode(document.getElementById('final_span'));
+                  window.getSelection().addRange(range);
+                }
+                if (create_email) {
+                  create_email = false;
+                  createEmail();
+                }
+              };
+            
+              recognition.onresult = function(event) {
+                var interim_transcript = '';
+                for (var i = event.resultIndex; i < event.results.length; ++i) {
+                  if (event.results[i].isFinal) {
+                    final_transcript += event.results[i][0].transcript;
+                  } else {
+                    interim_transcript += event.results[i][0].transcript;
+                  }
+                }
+                final_transcript = capitalize(final_transcript);
+                //console.log(final_transcript);
+                var x = final_transcript.split(" ");
+                if(x[x.length-1]=="okay"){
+                  //console.log(x[x.length-1]);
+                  savedata();
+                }
+                
+
+
+                final_span.innerHTML = linebreak(final_transcript);
+                interim_span.innerHTML = linebreak(interim_transcript);
+                if (final_transcript || interim_transcript) {
+                  showButtons('inline-block');
+                }
+              };
+            }
+            
+            function upgrade() {
+              start_button.style.visibility = 'hidden';
+              showInfo('info_upgrade');
+            }
+            
+            var two_line = /\n\n/g;
+            var one_line = /\n/g;
+            function linebreak(s) {
+              return s.replace(two_line, '<p></p>').replace(one_line, '<br>');
+            }
+            var first_char = /\S/;
+            function capitalize(s) {
+              return s.replace(first_char, function(m) { return m.toUpperCase(); });
+            }
+            
+            function createEmail() {
+              var n = final_transcript.indexOf('\n');
+              if (n < 0 || n >= 80) {
+                n = 40 + final_transcript.substring(40).indexOf(' ');
+              }
+              var subject = encodeURI(final_transcript.substring(0, n));
+              var body = encodeURI(final_transcript.substring(n + 1));
+              window.location.href = 'mailto:?subject=' + subject + '&body=' + body;
+            }
+            
+            
+            function savedata() {
+              if (recognizing) {
+                recognizing = false;
+                recognition.stop();
+              }
+              copy_button.style.display = 'none';
+              copy_info.style.display = 'inline-block';
+              //alert(final_transcript);
+                  var rootRef = firebase.database().ref();
+                  var storesRef = rootRef.child('STT');
+
+                  var x = final_transcript.split(" ");
+                  var text = [];
+                  for (i = 0; i < x.length-1; i++) {
+                    if(i==x.length-2){
+                      text += x[i];
+                    }
+                    else{
+                      text += x[i] + " ";
+                    }
+                    
+                  }
+                  console.log(text);
+                  storesRef.push(text);
+              showInfo('')
+            }
+            
+            
+            function emailButton() {
+              if (recognizing) {
+                create_email = true;
+                recognizing = false;
+                recognition.stop();
+              } else {
+                createEmail();
+              }
+              email_button.style.display = 'none';
+              email_info.style.display = 'inline-block';
+              showInfo('');
+            }
+            
+            function startButton(event) {
+              if (recognizing) {
+                recognition.stop();
+                return;
+              }
+              final_transcript = '';
+              recognition.lang = select_dialect.value;
+              recognition.start();
+              ignore_onend = false;
+              final_span.innerHTML = '';
+              interim_span.innerHTML = '';
+              start_img.src = 'https://storage.googleapis.com/jidapha/controll_web/mic-slash.gif';
+              showInfo('info_allow');
+              showButtons('none');
+              start_timestamp = event.timeStamp;
+            }
+            
+            function showInfo(s) {
+              if (s) {
+                for (var child = info.firstChild; child; child = child.nextSibling) {
+                  if (child.style) {
+                    child.style.display = child.id == s ? 'inline' : 'none';
+                  }
+                }
+                info.style.visibility = 'visible';
+              } else {
+                info.style.visibility = 'hidden';
+              }
+            }
+            
+            var current_style;
+            function showButtons(style) {
+              if (style == current_style) {
+                return;
+              }
+              current_style = style;
+              //copy_button.style.display = style;
+              //email_button.style.display = style;
+              //copy_info.style.display = 'none';
+              //email_info.style.display = 'none';
+            }
+            </script>
+            
+          </div>
+        </header>
+        
+    </div>
+
+    
+</body>
+</html>
